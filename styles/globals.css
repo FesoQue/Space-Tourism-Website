@@ -1,26 +1,27 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+body{
+  font-family: 'Bellefair', serif;
+}
+h1, h2, h3, h4, h5, h6{
+  @apply font-[Bellefair] text-[#fff]  uppercase
+}
+p{
+  @apply font-[Barlow] text-[.94rem] text-[#D0D6F9] leading-[25px] font-[400]
+}
+a{
+  font-family: 'Barlow Condensed', sans-serif;
+}
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@layer components {
+  .intro-sub-heading span{
+    @apply opacity-[.25]
   }
-  body {
-    color: white;
-    background: black;
+  .intro-sub-heading p{
+    @apply text-[#fff] uppercase mb-[1rem]
   }
 }
