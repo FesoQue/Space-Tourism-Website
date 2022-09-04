@@ -8,9 +8,8 @@ export default function Home() {
       <Head>
         <title>Space Tourism Website</title>
         <meta name="description" content="Multi-page space tourism website" />
-        <link rel="icon" href="/assets/favicon.png" />
       </Head>
-      <div className='bg-bg-home-mobile h-screen '>
+      <div className='bg-bg-home-mobile h-screen bg-cover '>
         <Layout>
           <div className="px-[1.5rem] text-center">
             <div className='intro-sub-heading'>

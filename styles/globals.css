@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h6{
 p{
   @apply font-[Barlow] text-[.94rem] text-[#D0D6F9] leading-[25px] font-[400]
 }
-a{
+a, button{
   font-family: 'Barlow Condensed', sans-serif;
 }
 }
@@ -24,4 +24,7 @@ a{
   .intro-sub-heading p{
     @apply text-[#fff] uppercase mb-[1rem]
   }
+.tab-btn.active-tab-btn{
+  @apply border-b-2 border-white text-white
+}
 }
