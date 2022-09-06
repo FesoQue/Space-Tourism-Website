@@ -4,7 +4,7 @@
 
 @layer base {
 body{
-  font-family: 'Bellefair', serif;
+  font-family: 'Bellefair', sans-serif;
 }
 h1, h2, h3, h4, h5, h6{
   @apply font-[Bellefair] text-[#fff]  uppercase
@@ -26,5 +26,8 @@ a, button{
   }
 .tab-btn.active-tab-btn{
   @apply border-b-2 border-white text-white
+}
+button.active-tab-btn-dot{
+  @apply opacity-100
 }
 }

@@ -3,18 +3,18 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Layout from '../../components/shared_layout/Layout'
 
-const Index = ({ destinationData }) => {
-    const [destinations, setDestinations] = useState(destinationData.destinations)
+const Index = ({ dataResult }) => {
+    const [destinations, setDestinations] = useState(dataResult.destinations)
     const [value, setValue] = useState(0)
     const { description, distance, images, name, travel } = destinations[value]
 
     return (
-        <div>
+        <main>
             <Head>
                 <title>Space Tourism Website - Destination</title>
                 <meta name="description" content="space tourism website destination page" />
             </Head>
-            <div className='h-full bg-bg-destination-mobile bg-cover'>
+            <div className='h-full min-h-screen bg-bg-destination-mobile bg-cover'>
                 <Layout>
                     <div className='container mx-auto px-[1.5rem] pb-[3rem]'>
                         <div className='text-center'>
@@ -49,19 +49,18 @@ const Index = ({ destinationData }) => {
                     </div>
                 </Layout>
             </div>
-        </div>
+        </main>
     )
 }
 export default Index
 
 
 export const getStaticProps = async () => {
-    const getDestinations = await fetch('https://raw.githubusercontent.com/FesoQue/Space-Tourism-Website/main/public/data.json')
-    // const getDestinations = await fetch('/data.json')
-    const destinationData = await getDestinations.json()
+    const getData = await fetch('https://raw.githubusercontent.com/FesoQue/Space-Tourism-Website/main/public/data.json')
+    const dataResult = await getData.json()
     return {
         props: {
-            destinationData
+            dataResult
         }
     }
 }

@@ -9,9 +9,9 @@ export default function Home() {
         <title>Space Tourism Website</title>
         <meta name="description" content="Multi-page space tourism website" />
       </Head>
-      <div className='bg-bg-home-mobile h-screen bg-cover '>
+      <div className='bg-bg-home-mobile h-full min-h-screen bg-cover '>
         <Layout>
-          <div className="px-[1.5rem] text-center">
+          <div className="px-[1.5rem] text-center pb-[3rem]">
             <div className='intro-sub-heading'>
               <p>So you want to travel to space</p>
             </div>
