@@ -3,31 +3,43 @@
 @tailwind utilities;
 
 @layer base {
-body{
-  font-family: 'Bellefair', sans-serif;
-}
-h1, h2, h3, h4, h5, h6{
-  @apply font-[Bellefair] text-[#fff]  uppercase
-}
-p{
-  @apply font-[Barlow] text-[.94rem] text-[#D0D6F9] leading-[25px] font-[400]
-}
-a, button{
-  font-family: 'Barlow Condensed', sans-serif;
-}
+  body {
+    font-family: 'Bellefair', sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-[Bellefair] text-[#fff]  uppercase;
+  }
+  p {
+    @apply font-[Barlow] text-[.94rem] text-[#D0D6F9] leading-[25px] font-[400];
+  }
+  a,
+  button {
+    font-family: 'Barlow Condensed', sans-serif;
+  }
+  button {
+    outline: 0;
+  }
 }
 
 @layer components {
-  .intro-sub-heading span{
-    @apply opacity-[.25]
+  .intro-sub-heading span {
+    @apply opacity-[.25];
   }
-  .intro-sub-heading p{
-    @apply text-[#fff] uppercase mb-[1rem]
+  .intro-sub-heading p {
+    @apply text-[#fff] uppercase mb-[1rem];
   }
-.tab-btn.active-tab-btn{
-  @apply border-b-2 border-white text-white
-}
-button.active-tab-btn-dot{
-  @apply opacity-100
-}
+  .tab-btn.active-tab-btn {
+    @apply border-b-2 border-white text-white;
+  }
+  button.active-tab-btn-dot {
+    @apply opacity-100;
+  }
+  button.active-num-tab {
+    @apply bg-white text-black;
+  }
 }

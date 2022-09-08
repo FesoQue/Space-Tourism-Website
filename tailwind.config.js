@@ -9,7 +9,8 @@ module.exports = {
       backgroundImage: {
         'bg-home-mobile': 'url("/assets/home/background-home-mobile.jpg")',
         'bg-destination-mobile': 'url("/assets/destination/background-destination-mobile.jpg")',
-        'bg-crew-mobile': 'url("/assets/crew/background-crew-mobile.jpg")'
+        'bg-crew-mobile': 'url("/assets/crew/background-crew-mobile.jpg")',
+        'bg-technology-mobile': 'url("/assets/technology/background-technology-mobile.jpg")',
       },
       fontFamily: {
         'bellefair': ['Bellefair', 'sans-serif'],

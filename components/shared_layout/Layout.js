@@ -1,12 +1,12 @@
-import Toolbar from "../toolbar/Toolbar"
+import Toolbar from './toolbar/Toolbar';
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   return (
-    <main>
+    <div>
       <Toolbar />
       <div>{children}</div>
-    </main>
-  )
-}
+    </div>
+  );
+};
 
-export default Layout
+export default Layout;
