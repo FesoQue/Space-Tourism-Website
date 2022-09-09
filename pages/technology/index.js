@@ -26,12 +26,8 @@ const Index = ({ dataResult }) => {
               </div>
             </div>
           </div>
-          <div className='w-full h-[180px] mb-[2rem] image-wrapper'>
-            <img
-              className='w-full h-full object-cover'
-              src={images.portrait}
-              alt={name}
-            />
+          <div className='w-full h-[200px] mb-[2rem] image-wrapper outline'>
+            <img className='w-full h-full' src={images.portrait} alt={name} />
           </div>
           <div className='container mx-auto px-[1.5rem] pb-[3rem]'>
             <div className='text-center  mb-[1.6rem]'>
@@ -40,7 +36,7 @@ const Index = ({ dataResult }) => {
                   <button
                     onClick={() => setValue(index)}
                     key={tech.name}
-                    className={`w-[40px] h-[40px] text-white font-bellefair text-[1rem] rounded-full border-2 border-[#555] mx-[.5rem] ${
+                    className={`w-[40px] h-[40px] inline-block text-white font-bellefair text-[1rem] rounded-full border-2 border-[#555] mx-[.5rem] ${
                       value === index && 'active-num-tab'
                     }`}
                   >

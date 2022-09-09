@@ -1,12 +1,17 @@
 import Toolbar from './toolbar/Toolbar';
 import Sidebar from './Sidebar';
+import { useState } from 'react';
 
 const Layout = ({ children }) => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   return (
     <div>
-      <Toolbar />
+      <Toolbar setIsSidebarOpen={setIsSidebarOpen} />
       <div>{children}</div>
-      <Sidebar />
+      <Sidebar
+        isSidebarOpen={isSidebarOpen}
+        setIsSidebarOpen={setIsSidebarOpen}
+      />
     </div>
   );
 };

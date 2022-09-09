@@ -1,18 +1,30 @@
-import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
+import React from 'react';
+import Image from 'next/image';
+import { Hamburger_Icon } from '../../icons/Icons';
+import Link from 'next/link';
 
-const Toolbar = () => {
+const Toolbar = ({ setIsSidebarOpen }) => {
   return (
     <nav className='text-blue-500 flex justify-between items-center h-[80px] px-[1.5rem] mb-[1rem]'>
       <Link href={'/'}>
         <a>
-          <Image src={'/assets/images/svg/logo.svg'} alt='logo' width='40px' height='40px' />
+          <Image
+            src={'/assets/images/svg/logo.svg'}
+            alt='logo'
+            width='40px'
+            height='40px'
+          />
         </a>
       </Link>
-      <Image src={'/assets/images/svg/hamburger.svg'} alt='logo' width='24px' height='21px' />
+      <button
+        onClick={() => {
+          setIsSidebarOpen(true);
+        }}
+      >
+        <Hamburger_Icon />
+      </button>
     </nav>
-  )
-}
+  );
+};
 
-export default Toolbar
+export default Toolbar;
