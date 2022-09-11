@@ -5,6 +5,11 @@
 @layer base {
   body {
     font-family: 'Bellefair', sans-serif;
+    overflow-x: hidden;
+  }
+  main {
+    max-width: 2000px;
+    margin: 0 auto;
   }
   h1,
   h2,
@@ -15,7 +20,7 @@
     @apply font-[Bellefair] text-[#fff]  uppercase;
   }
   p {
-    @apply font-[Barlow] text-[.94rem] text-[#D0D6F9] leading-[25px] font-[400] max-w-[450px] mx-auto;
+    @apply font-[Barlow] text-[.94rem] text-[#D0D6F9] leading-[25px] font-[400];
   }
   a,
   button {
@@ -59,7 +64,35 @@
   li.activeLink {
     @apply after:absolute after:top-0 after:right-0 after:bottom-0 after:block after:w-[4px] after:h-[26px] after:bg-white;
   }
+  .menu-item a {
+    @apply text-[14px] text-[#fff];
+  }
+  .text.text {
+    color: #d0d6f9;
+  }
 }
 main.home-bg {
   background-position: 50% 70%;
+}
+.menu-item {
+  position: relative;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.menu-item.activeNav::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+}
+@media screen and (min-width: 1280px) {
+  .viewportHeight {
+    height: calc(100vh - (150px + 2.5rem));
+  }
 }
