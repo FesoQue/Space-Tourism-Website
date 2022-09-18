@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import Layout from '../components/shared_layout/Layout';
 
 export default function Home() {
@@ -33,10 +34,12 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className='w-[150px] h-[150px] rounded-full bg-white flex justify-center items-center mx-auto xl:mx-0 xl:w-[200px] xl:h-[200px] self-center '>
-              <button className='text-[20px] text-[#0B0D17] uppercase xl:text-[2rem]'>
-                Explore
-              </button>
+            <div>
+              <Link href={'/destination'}>
+                <a className='w-[150px] h-[150px] rounded-full bg-white flex justify-center items-center mx-auto xl:mx-0 xl:w-[200px] xl:h-[200px] self-center text-[20px] text-[#0B0D17] uppercase xl:text-[2rem]'>
+                  Explore
+                </a>
+              </Link>
             </div>
           </div>
         </Layout>

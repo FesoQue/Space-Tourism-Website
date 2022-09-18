@@ -35,11 +35,6 @@
   button {
     outline: 0;
   }
-
-  aside {
-    @apply right-[-100%];
-    transition: 0.4s ease-in-out;
-  }
 }
 
 @layer components {
@@ -57,9 +52,6 @@
   }
   button.active-num-tab {
     @apply bg-white text-black;
-  }
-  aside.show-sidebar {
-    right: 0;
   }
   li.activeLink {
     @apply after:absolute after:top-0 after:right-0 after:bottom-0 after:block after:w-[4px] after:h-[26px] after:bg-white;

@@ -41,7 +41,7 @@ const Index = ({ dataResult }) => {
                     <button
                       onClick={() => setValue(index)}
                       key={destination.name}
-                      className={`tab-btn text-white text-[1rem] uppercase mx-[15px] py-[5px] text-[#D0D6F9] ${
+                      className={`tab-btn text-[1rem] uppercase mx-[15px] py-[5px] text-[#D0D6F9] ${
                         value === index && 'active-tab-btn'
                       }`}
                     >
